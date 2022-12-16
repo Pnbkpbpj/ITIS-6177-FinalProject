@@ -32,27 +32,26 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  * @swagger
  * /api/v1/image-analysis:
  *   post:
- *     summary: Get sentiment of input text which is in any language
- *     description: Add the text or the conservation of anylanguage for which context sentiment has to be identified
- *     produces:
+ *     summary: Analyze an image to get description, objects in the image and tags realted to the image
+ *     description: The Api analyzes the input image and gives the description of image,objects detected in the image
  *       - application/json
  *     responses:
  *       200:
- *         description: Result of sentimental analysics along with identified language
+ *         description: Result of image analysis for the input image
  *       400:
- *         description: Invalid Input, must be JSON object with text attribute
+ *         description: Invalid Input, must be valid URL to the image
  *       500:
  *         description: For any server errors, please try again
  *     parameters:
  *     - in: "body"
- *       name: "body"
- *       description: "Input Text"
+ *       name: "image"
+ *       description: "Input Image URL"
  *       required: true
  *       schema:
  *         properties:
  *           text:
  *             type: string
- *             example: "I had the best day of my life."
+ *             example: "https://miro.medium.com/max/1192/1*JCqgJ2JDDyQeBA2IGKxlJQ.png"
  */
 app.post('/api/v1/image-analysis', (req, res) => {
     if (req.body.image) {

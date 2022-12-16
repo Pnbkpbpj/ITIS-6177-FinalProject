@@ -28,7 +28,7 @@ The image must be bigger than 50 x 50 pixels and smaller than 16,000 x 16,000 pi
 # How it works?
 When an image is given as input, it recognizes the objects and gives us the image tags with rectangles around the object indicating what is that particular object.
 
-![image](https://user-images.githubusercontent.com/71330830/117388615-120da900-aeb9-11eb-8559-7d4ffedaf994.png)
+![image](https://miro.medium.com/max/1192/1*JCqgJ2JDDyQeBA2IGKxlJQ.png )
 
 
 ## Try out [SWAGGER playground](http://143.198.185.27:8000/docs/)!!
@@ -93,11 +93,10 @@ Swagger playground for TextScanner API is available on below url:
 ```
 http://143.198.185.27:8000/docs/
 ```
-#
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F3%2F38%2FDetected-with-YOLO--Schreibtisch-mit-Objekten.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FObject_detection&tbnid=CeGn9NCnSTk2iM&vet=12ahUKEwj5xcivov37AhXaD1kFHeLVA8QQMygAegUIARDhAQ..i&docid=NZgI-_CyMhb-xM&w=2259&h=1453&q=object%20recognition&hl=en&ved=2ahUKEwj5xcivov37AhXaD1kFHeLVA8QQMygAegUIARDhAQ 
+# 
 #
 ## Example - Postman
-https://drive.google.com/file/d/1fXjRqua0bZcBM2JiV7DHq1Tr9hSPazNu/view?usp=sharing
+![image](https://drive.google.com/file/d/1fXjRqua0bZcBM2JiV7DHq1Tr9hSPazNu/view?usp=sharing)
 #
 #
 A successful response is returned in JSON. The sample application parses and displays a successful response in the command prompt window, similar to the following example:

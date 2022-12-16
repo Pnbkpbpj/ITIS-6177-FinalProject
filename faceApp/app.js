@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-//const { computerVision } = require('./index')
+const { computerVision } = require('./index')
 
 const app = express();
 app.use(bodyParser.json());

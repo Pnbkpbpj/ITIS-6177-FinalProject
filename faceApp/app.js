@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 const port = 8000;
 
 
-app.post('/image-analysis', (req, res) => {
+app.post('/api/v1/image-analysis', (req, res) => {
     if (req.body.image) {
         computerVision(req.body.image)
             .then(result => {

@@ -10,9 +10,7 @@ const ComputerVisionClient = require('@azure/cognitiveservices-computervision').
 const ApiKeyCredentials = require('@azure/ms-rest-js').ApiKeyCredentials;
 
 const key = process.env.KEY;
-const endpoint = process.env.ENDPOINT
-//const key = '1c75d17c6ede48c2a237c3d373c0b080';
-//const endpoint = 'https://pnbk-si-final-project.cognitiveservices.azure.com/';
+const endpoint = process.env.ENDPOINT;
 
 const computerVisionClient = new ComputerVisionClient(
     new ApiKeyCredentials({ inHeader: { 'Ocp-Apim-Subscription-Key': key } }), endpoint);

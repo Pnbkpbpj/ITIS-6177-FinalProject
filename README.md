@@ -77,34 +77,27 @@ JSON fields in the response body and their descrption:
 | Fields| Type | Description |
 | --- | --- | --- |
 | Success | boolean | Indicates whether response received successfully or not |
-| lines | [Object]	 | 	List of text lines. The maximum number of lines returned is 300 per page. The lines are sorted top to bottom, left to right, although in certain cases proximity is treated with higher priority. As the sorting order depends on the detected text, it may change across images and OCR version updates. Thus, business logic should be built upon the actual line location instead of order. |
-| words | [Object]	 | List of words in the text line. |
-| boundingBox | [Number]	 | Quadrangle bounding box of a line or word, depending on the parent object, specified as a list of 8 numbers. The coordinates are specified relative to the top-left of the original image. The eight numbers represent the four points, clockwise from the top-left corner relative to the text orientation. For image, the (x, y) coordinates are measured in pixels. For PDF, the (x, y) coordinates are measured in inches. |
-| text | String	 | The text content of a line or word. |
+| Objects | [Object]	 | 	List of objects in the image. If there is a dog, a cat, and a person in an image, the Detect operation will list those things along with where they are in the image. You can use this feature to find out more about how things in an image are connected to each other. |
+| tags | [Object]	 | List of tags realted to the image |
+| rectangle | [Number]	 | Rectangle bounding box of a object in the image, The coordinates are specified relative to the top-left of the original image. The four numbers represent the top left corner point,width and height of the object. |
+| captions | [Object]	 | The description of the image in words with confidence |
+| text | String | description of image in text |
 | confidence | Number	 | Confidence value between 0 and 1 inclusive. |
-| width | Number	 | The width of the image/PDF in pixels/inches, respectively. |
-| height | Number	 | 	The height of the image/PDF in pixels/inches, respectively. |
-| angle | Number	 | The general orientation of the text in clockwise direction, measured in degrees between (-180, 180]. |
-| page | Integer	 | The 1-based page number in the input document. |
-| unit | String	 | The unit used by the width, height and boundingBox properties. For images, the unit is "pixel". For PDF, the unit is "inch". |
-| language | String	 | The input language of the overall document. |
+| width | Number	 | The width of the image rectangle in pixels/inches, respectively. |
+| height | Number	 | 	The height of the image rectangle in pixels/inches, respectively. |
+
 #
 
 ## Example - SWAGGER 
 Swagger playground for TextScanner API is available on below url:
 ```
-http://142.93.56.167:3000/docs
+http://143.198.185.27:8000/docs/
 ```
 #
-https://user-images.githubusercontent.com/71330830/117339945-57f14f80-ae6e-11eb-9ad5-916ad2797443.mp4
-
-
+https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F3%2F38%2FDetected-with-YOLO--Schreibtisch-mit-Objekten.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FObject_detection&tbnid=CeGn9NCnSTk2iM&vet=12ahUKEwj5xcivov37AhXaD1kFHeLVA8QQMygAegUIARDhAQ..i&docid=NZgI-_CyMhb-xM&w=2259&h=1453&q=object%20recognition&hl=en&ved=2ahUKEwj5xcivov37AhXaD1kFHeLVA8QQMygAegUIARDhAQ 
 #
 ## Example - Postman
-
-
-https://user-images.githubusercontent.com/71330830/117339972-5f185d80-ae6e-11eb-8313-7dc93090243a.mp4
-
+https://drive.google.com/file/d/1fXjRqua0bZcBM2JiV7DHq1Tr9hSPazNu/view?usp=sharing
 #
 #
 A successful response is returned in JSON. The sample application parses and displays a successful response in the command prompt window, similar to the following example:

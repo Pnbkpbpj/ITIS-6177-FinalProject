@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-const { computerVision } = require('./index')
+//const { computerVision } = require('./index')
 
 const app = express();
 app.use(bodyParser.json());
@@ -30,7 +30,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 /**
  * @swagger
- * /api/v1/sentiments/:
+ * /api/v1/image-analysis:
  *   post:
  *     summary: Get sentiment of input text which is in any language
  *     description: Add the text or the conservation of anylanguage for which context sentiment has to be identified
@@ -54,8 +54,6 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *             type: string
  *             example: "I had the best day of my life."
  */
-
-
 app.post('/api/v1/image-analysis', (req, res) => {
     if (req.body.image) {
         computerVision(req.body.image)

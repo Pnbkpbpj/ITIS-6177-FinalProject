@@ -96,7 +96,7 @@ http://143.198.185.27:8000/docs/
 # 
 #
 ## Example - Postman
-![image](https://drive.google.com/file/d/1fXjRqua0bZcBM2JiV7DHq1Tr9hSPazNu/view?usp=sharing)
+![image](https://github.com/Pnbkpbpj/ITIS-6177-FinalProject/blob/main/faceApp/postman%20query.png)
 #
 #
 A successful response is returned in JSON. The sample application parses and displays a successful response in the command prompt window, similar to the following example:

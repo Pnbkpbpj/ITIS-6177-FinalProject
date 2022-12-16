@@ -49,7 +49,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *       required: true
  *       schema:
  *         properties:
- *           text:
+ *           image:
  *             type: string
  *             example: "https://miro.medium.com/max/1192/1*JCqgJ2JDDyQeBA2IGKxlJQ.png"
  */
